@@ -5,7 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { router } from './Routes/Routes';
-import AuthProvider from './Firebase/Providers/AuthProvider/AuthProvider';
+import AuthProvider from './Providers/AuthProvider/AuthProvider';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
