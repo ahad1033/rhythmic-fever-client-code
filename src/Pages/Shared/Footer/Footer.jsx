@@ -2,7 +2,7 @@
 const Footer = () => {
     return (
         <footer>
-            <div className="footer p-10 bg-base-200 text-base-content">
+            <div className="footer p-10 bg-base-200 text-base-content mt-2">
                 <div>
                     <h2 className="font-bold text-3xl mb-2">Rhythmic Fever</h2>
                     <p>House: 99, Road: 10, Block: D, <br />Banani Model Town, Dhaka.</p>
