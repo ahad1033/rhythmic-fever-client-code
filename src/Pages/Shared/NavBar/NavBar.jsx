@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
 
@@ -27,7 +28,7 @@ const NavBar = () => {
                             {navOptions}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">Rhythmic Fever</a>
+                    <Link to='/'><a className="btn btn-ghost normal-case text-xl">Rhythmic Fever</a></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -35,7 +36,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Login</a>
+                    <Link to='/login'><a className="btn">Login</a></Link>
                 </div>
             </div>
         </div>
