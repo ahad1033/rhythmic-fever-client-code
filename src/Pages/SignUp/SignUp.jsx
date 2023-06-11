@@ -5,7 +5,7 @@ import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 
 const SignUp = () => {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const { createUser } = useContext(AuthContext); 
 
     const onSubmit = data => {
@@ -16,9 +16,6 @@ const SignUp = () => {
             console.log(loggedUser);
         })
     };
-
-    console.log(watch("example"));
-
 
     return (
         <div className="hero min-h-screen bg-base-200">

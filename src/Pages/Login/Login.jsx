@@ -1,10 +1,14 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 import { Link } from "react-router-dom";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import { app } from "../../Firebase/firebase.config";
 
 const Login = () => {
 
     const { signIn } = useContext(AuthContext);
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider;
 
     const handleLogin = event => {
         event.preventDefault();
@@ -18,6 +22,17 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+            })
+    }
+
+    const handleGoogleSignIn = () => {
+        signInWithPopup(auth, provider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => {
+                console.log('error', error.message);
             })
     }
 
@@ -49,6 +64,7 @@ const Login = () => {
                             <input className="btn btn-primary" type="submit" value="Login" />
                         </div>
                         <p className="text-center underline-offset-1"><small>New here? <Link className="font-bold" to='/signup'> Create an account</Link></small></p>
+                        <input className="btn btn-primary" onClick={handleGoogleSignIn} type="submit" value="Signin With Google" />
                     </form>
                 </div>
             </div>
