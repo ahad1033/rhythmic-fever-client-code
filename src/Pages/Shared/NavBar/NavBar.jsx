@@ -13,7 +13,7 @@ const NavBar = () => {
     }
 
     const navOptions = <>
-        <li><a>Item 1</a></li>
+        <li><Link to='/instructor'>Instructors</Link></li>
         <li tabIndex={0}>
             <details>
                 <summary>Parent</summary>
