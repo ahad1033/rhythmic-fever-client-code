@@ -1,7 +1,8 @@
 
-const ClassesCards = ({ classes }) => {
+const PopularClassCards = ({popularClass}) => {
+    console.log(popularClass);
 
-    const { image, name, instructor, availableSeats, price } = classes;
+    const { image, name, instructor, availableSeats, price } = popularClass;
 
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
@@ -19,4 +20,4 @@ const ClassesCards = ({ classes }) => {
     );
 };
 
-export default ClassesCards;
+export default PopularClassCards;
