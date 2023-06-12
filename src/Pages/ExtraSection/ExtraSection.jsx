@@ -5,7 +5,7 @@ const ExtraSection = () => {
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
                     <h1 className="mb-5 text-3xl font-bold">Fill The Registration Form Online</h1>
-                    <p className="mb-5">Signup now and get discount $5.</p>
+                    <p className="mb-5">Sign Up now and get discount $5.</p>
                     <button className="btn btn-primary">Click Here to Submit</button>
                 </div>
             </div>
